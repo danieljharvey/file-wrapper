@@ -1,0 +1,14 @@
+{
+    "name": "danieljharvey/file-wrapper",
+    "description": "A simple file system function wrapper that can be easily mocked or stubbed for testing",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Harvey",
+            "email": "danieljamesharvey@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
