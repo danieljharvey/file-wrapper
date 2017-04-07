@@ -1,6 +1,6 @@
 <?php
 
-namespace DanielJHarvey;
+namespace DanielJHarvey\FileWrapper;
 
 // doesn't do anything clever, just means that file actions can be stubbed in testing (so we can mock responses and not write all over test machine)
 
