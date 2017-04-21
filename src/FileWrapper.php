@@ -53,7 +53,11 @@ class FileWrapper {
 	}
 
 	public function file($filename, $flags=0,$context=false) {
-		return file($filename,$flags,$context);
+		if ($context) {
+			return file($filename,$flags,$context);	
+		} else {
+			return file($filename,$flags);
+		}
 	}
 
 	public function fileatime($filename) {
@@ -101,7 +105,11 @@ class FileWrapper {
 	}
 	
 	public function fopen($filename,$mode,$use_include_path=false,$context=false) {
-		return fopen($filename,$mode,$use_include_path,$context);
+		if ($context) {
+			return fopen($filename,$mode,$use_include_path,$context);	
+		} else {
+			return fopen($filename,$mode,$use_include_path);
+		}
 	}
 
 	public function fpassthru($handle) {
@@ -110,6 +118,38 @@ class FileWrapper {
 	
 	public function fputcsv($handle,$fields,$delimiter=',',$enclosure='"',$escape_char='\\') {
 		return fputcsv($handle,$fields,$delimiter,$enclosure,$escape_char);
+	}
+
+	public function fread($handle,$length) {
+		return fread($handle,$length);
+	}
+
+	public function fscanf($handle,$format) {
+		return fscanf ($handle, $format);
+	}
+
+	public function fseek($handle,$offset,$whence=SEEK_SET) {
+		return fseek($handle, $offset, $whence);
+	}
+	
+	public function fstat($handle) {
+		return fstat($handle);
+	}
+
+	public function ftell($handle) {
+		return ftell($handle);
+	}
+	
+	public function ftruncate($handle,$size) {
+		return ftruncate($handle,$size);	
+	}
+	
+	public function fwrite($handle,$string,$length=false) {
+		return fwrite($handle, $string, $length);
+	}
+
+	public function glob($pattern,$flags=0) {
+		return glob($pattern,$flags);	
 	}
 	
 	public function moveUploadedFile($filename, $destination) {
@@ -121,7 +161,11 @@ class FileWrapper {
 	}
 
 	public function unlink($filename,$context=false) {
-		return unlink($filename,$context);
+		if ($context) {
+			return unlink($filename,$context);	
+		} else {
+			return unlink($filename);	
+		}
 	}
 
 	public function mkdir($pathName, $mode= 0777, $recursive=false) {
