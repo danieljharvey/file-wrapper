@@ -40,6 +40,10 @@ class FileWrapper {
 		return disk_total_space($directory);
 	}
 
+	public function fclose($handle) {
+		return fclose($handle);
+	}
+
 	public function fileExists($filename) {
 		return file_exists($filename);
 	}
