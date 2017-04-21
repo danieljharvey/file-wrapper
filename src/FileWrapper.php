@@ -52,6 +52,66 @@ class FileWrapper {
 		return file_put_contents($filename,$data);
 	}
 
+	public function file($filename, $flags=0,$context=false) {
+		return file($filename,$flags,$context);
+	}
+
+	public function fileatime($filename) {
+		return fileatime($filename);
+	}
+
+	public function filectime($filename) {
+		return filectime($filename);
+	}
+	
+	public function filegroup($filename) {
+		return filegroup($filename);	
+	}
+
+	public function fileinode($filename) {
+		return fileinode($filename);
+	}
+
+	public function filemtime($filename) {
+		return filemtime($filename);
+	}
+	
+	public function fileowner($filename) {
+		return fileowner($filename);	
+	}
+	
+	public function fileperms($filename) {
+		return fileperms($filename);	
+	}
+	
+	public function filesize($filename) {
+		return filesize($filename);	
+	}
+	
+	public function filetype($filename) {
+		return filetype($filename);
+	}
+	
+	public function flock($handle,$operation) {
+		return flock($handle, $operation);
+	}
+
+	public function fnmatch($pattern,$string,$flags=0) {
+		return fnmatch($pattern, $string, $flags);
+	}
+	
+	public function fopen($filename,$mode,$use_include_path=false,$context=false) {
+		return fopen($filename,$mode,$use_include_path,$context);
+	}
+
+	public function fpassthru($handle) {
+		return fpassthru($handle);
+	}
+	
+	public function fputcsv($handle,$fields,$delimiter=',',$enclosure='"',$escape_char='\\') {
+		return fputcsv($handle,$fields,$delimiter,$enclosure,$escape_char);
+	}
+	
 	public function moveUploadedFile($filename, $destination) {
 		return move_uploaded_file($filename,$destination);
 	}
