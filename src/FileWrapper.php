@@ -21,7 +21,11 @@ class FileWrapper {
 	}
 
 	public function copy($source, $dest, $context=false) {
-		return copy($source,$dest,$context);	
+		if ($context) {
+			return copy($source,$dest,$context);
+		} else {
+			return copy($source,$dest,$context);	
+		}
 	}
 
 	public function chmod($filename,$mode) {
