@@ -24,7 +24,7 @@ class FileWrapper {
 		if ($context) {
 			return copy($source,$dest,$context);
 		} else {
-			return copy($source,$dest,$context);	
+			return copy($source,$dest);	
 		}
 	}
 
