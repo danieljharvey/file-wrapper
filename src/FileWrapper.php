@@ -180,6 +180,10 @@ class FileWrapper {
 		return mkdir($pathName, $mode, $recursive);
 	}
 
+	public function base64Decode($data, $strict=false) {
+		return base64_decode($data, $strict);
+	}
+
 	public function base64Encode($data) {
 		return base64_encode($data);
 	}
