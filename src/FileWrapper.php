@@ -164,8 +164,8 @@ class FileWrapper {
 		return move_uploaded_file($filename,$destination);
 	}
 	
-	public function rename($oldname, $newName) {
-		return rename($oldname, $newname);
+	public function rename($oldName, $newName) {
+		return rename($oldName, $newName);
 	}
 
 	public function umask($mask) {
