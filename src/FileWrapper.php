@@ -165,7 +165,7 @@ class FileWrapper {
 	}
 	
 	public function rename($oldname, $newName) {
-		return rename($oldname, $newname;
+		return rename($oldname, $newname);
 	}
 
 	public function umask($mask) {
