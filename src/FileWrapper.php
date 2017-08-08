@@ -33,7 +33,11 @@ class FileWrapper {
 	}
 
 	public function dirName($path,$levels=1) {
-		return dirname ($path, $levels);
+		if ($levels==1) {
+			return dirname($path);
+		} else {
+			return dirname($path, $levels);
+		}
 	}
 
 	public function diskFreeSpace($directory) {
