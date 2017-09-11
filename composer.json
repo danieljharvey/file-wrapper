@@ -3,7 +3,7 @@
     "description": "A simple file system function wrapper that can be easily mocked or stubbed for testing",
     "type": "library",
     "license": "MIT",
-    "version":"2.1.0",
+    "version":"2.1.1",
     "keywords":["file","wrapper","testing"],
     "authors": [
         {

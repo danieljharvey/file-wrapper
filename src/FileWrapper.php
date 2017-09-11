@@ -157,7 +157,11 @@ class FileWrapper {
 	}
 	
 	public function fwrite($handle,$string,$length=false) {
-		return fwrite($handle, $string, $length);
+		if ($length) {
+			return fwrite($handle, $string, $length);
+		} else {
+			return fwrite($handle, $string);	
+		}
 	}
 
 	public function glob($pattern,$flags=0) {
